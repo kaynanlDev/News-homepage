@@ -7,9 +7,9 @@
 body{
     width: 100%;
 }
-    @import 'partials/layout';
-    @import 'partials/spacing';
     @import 'partials/variables';
+    @import 'partials/spacing';
+    @import 'partials/layout';
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
