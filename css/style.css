@@ -6,6 +6,7 @@
 
 body {
   width: 100%;
+  font-family: "inter", sans-serif;
 }
 
 .m-1 {
@@ -346,9 +347,172 @@ header {
   color: hsl(5, 85%, 63%);
 }
 
+.container-grid {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas: "back back new" "title link new" "cards cards cards";
+}
+@media (max-width: 570px) {
+  .container-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "back" "title" "link" "new" "cards";
+  }
+}
+
+.grid-back {
+  grid-area: back;
+  background: url("../../assets/images/image-web-3-desktop.jpg") no-repeat center/cover;
+}
+
+.grid-title {
+  grid-area: title;
+  padding: 16px;
+}
+.grid-title h1 {
+  max-width: 70%;
+  font-size: 40px;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+
+.grid-link {
+  grid-area: link;
+  padding: 16px;
+}
+.grid-link .link-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 24px;
+}
+.grid-link .link-btn {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 8px 24px;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(240, 100%, 5%);
+  transition: 0.3s ease;
+}
+.grid-link .link-btn:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+}
+
+.grid-new {
+  grid-area: new;
+  background-color: hsl(240, 100%, 5%);
+  padding: 24px;
+}
+.grid-new h2 {
+  font-size: 32px;
+  color: hsl(35, 77%, 62%);
+  margin-bottom: 16px;
+}
+.grid-new h3 {
+  color: hsl(36, 100%, 99%);
+  margin-bottom: 8px;
+}
+.grid-new p {
+  font-size: 15px;
+  color: hsl(233, 8%, 79%);
+  margin-bottom: 16px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: hsl(233, 8%, 79%);
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.cards {
+  grid-area: cards;
+  display: flex;
+  gap: 8px;
+}
+.cards .card {
+  display: flex;
+  gap: 16px;
+}
+.cards .card .card-back-1 {
+  width: 40%;
+  height: 70%;
+  background: url("../../assets/images/image-retro-pcs.jpg") no-repeat center/cover;
+}
+@media (max-width: 570px) {
+  .cards .card .card-back-1 {
+    margin: 0;
+    height: 100%;
+  }
+}
+.cards .card .card-back-2 {
+  width: 40%;
+  height: 70%;
+  background: url("../../assets/images/image-top-laptops.jpg") no-repeat center/cover;
+  margin-left: -40px;
+}
+@media (max-width: 570px) {
+  .cards .card .card-back-2 {
+    margin: 0;
+    height: 100%;
+  }
+}
+.cards .card .card-back-3 {
+  width: 40%;
+  height: 70%;
+  background: url("../../assets/images/image-gaming-growth.jpg") no-repeat center/cover;
+  margin-left: 32px;
+}
+@media (max-width: 570px) {
+  .cards .card .card-back-3 {
+    margin: 0;
+    height: 100%;
+  }
+}
+@media (max-width: 570px) {
+  .cards {
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.card-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card-text .num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(5, 85%, 63%);
+}
+.card-text a {
+  font-weight: 700;
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.card-text a:hover {
+  color: hsl(5, 85%, 63%);
+}
+.card-text .card-description {
+  width: 70%;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  opacity: 0.5;
 }
 
 .attribution a {

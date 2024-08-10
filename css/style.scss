@@ -6,10 +6,11 @@
 
 body{
     width: 100%;
+    font-family: 'inter', sans-serif;
 }
     @import 'partials/variables';
     @import 'partials/spacing';
     @import 'partials/layout';
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; opacity: 0.5;}
 .attribution a { color: hsl(228, 45%, 44%); }
